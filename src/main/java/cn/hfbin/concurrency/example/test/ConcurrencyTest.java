@@ -47,7 +47,7 @@ public class ConcurrencyTest {
         log.info("count:{}", count);
     }
 
-    private static void add() {
+    private static  void add() {
         count++;
     }
 
