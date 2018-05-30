@@ -1,7 +1,10 @@
 package cn.hfbin.concurrency.example.threadLocal;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * Created by: HuangFuBin
@@ -10,11 +13,14 @@ import org.springframework.web.bind.annotation.PostMapping;
  * Such description:
  */
 @Controller
+@Slf4j
 public class ThreadLocalController {
 
-    @PostMapping("/threadlocal/test")
-    public long threadlocal(){
-        return RequestHolder.getId();
+    @RequestMapping("/threadLocal/test")
+    @ResponseBody
+    public String threadlocal(){
+        log.info(RequestHolder.getId()+"");
+        return RequestHolder.getId()+"";
     }
 
 
