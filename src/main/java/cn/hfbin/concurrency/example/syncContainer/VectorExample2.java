@@ -8,7 +8,7 @@ import java.util.Vector;
  * Created by: HuangFuBin
  * Date: 2018/5/31
  * Time: 0:52
- * Such description:
+ * Such description:  Vector 在这种情况下也是存在线程安全的
  */
 @NotThreadSafe
 public class VectorExample2 {
