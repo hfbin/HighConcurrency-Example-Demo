@@ -8,7 +8,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.StampedLock;
-
+/**
+ * Created by: HuangFuBin
+ * Such description:
+ */
 @Slf4j
 @ThreadSafe
 public class LockExample5 {

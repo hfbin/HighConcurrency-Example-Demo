@@ -4,11 +4,17 @@ import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
-
+/**
+ * Created by: HuangFuBin
+ * Date: 2018/5/31
+ * Time: 17:50
+ * Such description: Condition 多线程间通信的工具
+ */
 @Slf4j
 public class LockExample6 {
 
     public static void main(String[] args) {
+
         ReentrantLock reentrantLock = new ReentrantLock();
         Condition condition = reentrantLock.newCondition();
 
@@ -16,6 +22,7 @@ public class LockExample6 {
             try {
                 reentrantLock.lock();
                 log.info("wait signal"); // 1
+                //锁的释放
                 condition.await();
             } catch (InterruptedException e) {
                 e.printStackTrace();
