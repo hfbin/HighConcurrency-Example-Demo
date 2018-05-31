@@ -17,7 +17,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 @Slf4j
 @ThreadSafe
-public class AtomicExample {
+public class AtomicIntegerExample {
 
     // 请求总数
     public static int clientTotal = 5000;
