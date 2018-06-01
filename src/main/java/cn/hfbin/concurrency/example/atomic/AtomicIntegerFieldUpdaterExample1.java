@@ -5,7 +5,6 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
-import java.util.concurrent.atomic.AtomicReference;
 
 /**
  * Created by: HuangFuBin
@@ -15,15 +14,15 @@ import java.util.concurrent.atomic.AtomicReference;
  */
 @Slf4j
 @ThreadSafe
-public class AtomicIntegerFieldUpdaterExample {
+public class AtomicIntegerFieldUpdaterExample1 {
 
 
     /**
      * 更新一个类的某一个字段的值，这个字段必须使用 volatile 修饰，不可以用static。
      *
      */
-    private static AtomicIntegerFieldUpdater<AtomicIntegerFieldUpdaterExample> updater =
-            AtomicIntegerFieldUpdater.newUpdater(AtomicIntegerFieldUpdaterExample.class, "count");
+    private static AtomicIntegerFieldUpdater<AtomicIntegerFieldUpdaterExample1> updater =
+            AtomicIntegerFieldUpdater.newUpdater(AtomicIntegerFieldUpdaterExample1.class, "count");
 
 
     @Getter
@@ -31,7 +30,7 @@ public class AtomicIntegerFieldUpdaterExample {
 
     public static void main(String[] args) {
 
-        AtomicIntegerFieldUpdaterExample example5 = new AtomicIntegerFieldUpdaterExample();
+        AtomicIntegerFieldUpdaterExample1 example5 = new AtomicIntegerFieldUpdaterExample1();
 
         if (updater.compareAndSet(example5, 100, 120)) {
             log.info("update success one, {}", example5.getCount());
