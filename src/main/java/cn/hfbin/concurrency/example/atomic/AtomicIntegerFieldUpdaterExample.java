@@ -16,8 +16,6 @@ import java.util.concurrent.atomic.AtomicReference;
 @Slf4j
 @ThreadSafe
 public class AtomicIntegerFieldUpdaterExample {
-
-
     /**
      * 更新一个类的某一个字段的值，这个字段必须使用 volatile 修饰，不可以用static。
      *
